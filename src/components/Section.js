@@ -37,9 +37,12 @@ console.log(fruit);
 */
 
 let fruit = ['apple', 'mango', 'melon'];
+//전개연산자로 기존 참조값을 deep copy한 다음에
 let newFruit = [...fruit];
+//완전 복사된 값을 변경하면
 newFruit[0] = 'orange';
 console.log(newFruit);
+//원본 값에는 영향을 미치지 않음
 console.log(fruit);
 
 function Section() {
