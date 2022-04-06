@@ -11,11 +11,9 @@ import Section from './components/Section';
 //JSX안쪽에서 연산이 필요한 구문은 무조건 {}감싸서 표현
 //JSX안쪽에서는 제한적인 연산만 가능 변수치환, 삼항연산, map반복처리, 이벤트 연결
 //JSX로 반복적인 요소를 내보낼때에는 고유값으로 key값 부여
-
 function App() {
 	return (
 		<>
-			{/* header */}
 			<Header />
 			<Section />
 			<Footer />
