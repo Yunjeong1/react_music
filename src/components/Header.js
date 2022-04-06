@@ -1,11 +1,7 @@
 import React from 'react';
 
 function Header() {
-	return (
-		<header>
-			<h1>DCODELAB</h1>
-		</header>
-	);
+	return <header>Header</header>;
 }
 
 export default Header;
