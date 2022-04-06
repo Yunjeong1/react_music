@@ -1,26 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Article from './Article';
 
-//hook : 컴포넌트 안쪽에 다양한 기능을 도와주는 모듈
-//useState: 컴포넌트의 랜더링에 관여하는 중요한 정보값을 관리해주는 훅
+/* 
+  전개연산자 (Spread Operator)
+  -참조형 자료를 완전복사 (deep copy)
+
+  변수에 배열이나 객체같은 참조형 자료를 할당하면 
+  해당 변수에는 실제 값이 할당되는 것이 아닌 해당값이 위치해있는 주소값이 참조
+*/
+
+//원시형 자료는 실제 해당 값이 변수에 할당되므로 같다고 출력
+const a = 'apple';
+const b = 'apple';
+console.log(a === b);
+
+//해당 배열의 값이 변수에 할당되는게 아닌 서로 다른 참조 주소가 할당되므로
+//아래 두값을 비교하면 다르다는 결과값이 출력
+const arr1 = ['red', 'green', 'blue'];
+const arr2 = ['red', 'green', 'blue'];
+console.log(arr1 === arr2);
 
 /*
-구조분해 할당
-비구조화 할당
-destructuring assignment;
+//배열을 생성하고
+let fruit = ['apple', 'mango', 'melon'];
+//해당 배열을 새로운 배열로 옮겨담음 (복사)
+let newFruit = fruit;
+//복사된 배열의 첫번째 값을 변경
+newFruit[0] = 'orange';
+//복사된 배열값 출력 (변경된 값으로 출력)
+console.log(newFruit);
+//변경하지 않은 원래 배열값도 같이 변경된 것을 확인
+console.log(fruit);
+
+//불변성 (immutable)
+//참조형 자료를 복사할때는 원본 데이터와 비교할 수록 있도록 무조건 deep copy
 */
-//각 배열의 데이터를 구조분해 할당을 이용해서 원하는 변수명으로 한번에 할당
-const fruit = ['apple', 'strawberry', 'melon'];
-const [a, b, c] = fruit;
 
-const student = {
-	name: '홍길동',
-	age: 20,
-	isFemale: false,
-};
-
-const { name } = student;
-console.log(name);
+let fruit = ['apple', 'mango', 'melon'];
+let newFruit = [...fruit];
+newFruit[0] = 'orange';
+console.log(newFruit);
+console.log(fruit);
 
 function Section() {
 	const arr = [
