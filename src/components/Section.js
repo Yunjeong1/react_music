@@ -1,9 +1,21 @@
 import React from 'react';
 
 function Section() {
+	const arr = [
+		'Blizzards',
+		'Calm',
+		'Dusty_Road',
+		'Escape',
+		'Payday',
+		'Retreat',
+		'Seasonal',
+	];
+
 	return (
 		<section>
-			<h1>Section</h1>
+			{arr.map((data, idx) => {
+				return <article key={idx}>{data}</article>;
+			})}
 		</section>
 	);
 }
